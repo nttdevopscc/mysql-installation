@@ -1,0 +1,6 @@
+---
+host_ip: 172.31.2.61
+mysql_user: root
+mysql_password: p@ssw0rd
+dbuser: ansible
+dbpassword: p@ssw0rd

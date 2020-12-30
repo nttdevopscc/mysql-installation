@@ -1,0 +1,7 @@
+- name: MySQL Installation
+  hosts: mysql_server
+  ignore_errors: true
+  ignore_unreachable: true
+  roles:
+    - mysql-installation
+  become: yes

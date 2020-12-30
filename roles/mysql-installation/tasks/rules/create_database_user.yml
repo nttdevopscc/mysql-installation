@@ -1,0 +1,6 @@
+- name: Create application user
+  mysql_user: 
+    name: "{{ dbuser }}"
+    password: "{{ dbpassword }}"
+    priv: '*.*:ALL' 
+    state: present

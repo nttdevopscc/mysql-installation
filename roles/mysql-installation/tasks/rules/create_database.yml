@@ -1,0 +1,13 @@
+- name: Create application database
+  mysql_db: 
+    name: "{{ item }}"
+    state: present
+    login_host: "{{ host_ip }}"
+    login_user: "{{ mysql_user }}"
+    login_password: "{{ mysql_password }}"
+  loop:
+    - ihispoc_db01
+    - ihispoc_db02
+    - ihispoc_db03
+    - ihispoc_db04
+    - ihispoc_db05

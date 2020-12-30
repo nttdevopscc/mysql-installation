@@ -1,0 +1,7 @@
+- name: Ensure MySQL is installed
+  apt: 
+    name={{ item }} 
+    state=present
+  loop:
+   - mysql-server
+   - python3-pymysql
