@@ -6,7 +6,6 @@
     login_user: "{{ mysql_user }}"
     login_password: "{{ mysql_password }}"
     login_port: 3306
-    priv: '*.*:ALL'
   loop:
     - ihispoc_db01
     - ihispoc_db02
