@@ -2,9 +2,11 @@
   mysql_db: 
     name: "{{ item }}"
     state: present
+    host: "{{ host_ip }}"
     login_host: "{{ host_ip }}"
     login_user: "{{ mysql_user }}"
     login_password: "{{ mysql_password }}"
+    priv: '*.*:ALL'
   loop:
     - ihispoc_db01
     - ihispoc_db02

@@ -1,6 +1,6 @@
 ---
 host_ip: 172.31.2.66
-mysql_user: root
+mysql_user: ansible
 mysql_password: p@ssw0rd
 dbuser: ansible
 dbpassword: p@ssw0rd
