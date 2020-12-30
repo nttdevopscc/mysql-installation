@@ -2,6 +2,7 @@
   mysql_db: 
     name: "{{ item }}"
     state: present
+    login_host: "{{ host_ip }}"
     login_user: "{{ mysql_user }}"
     login_password: "{{ mysql_user }}"
   loop:
@@ -15,6 +16,7 @@
   mysql_db:
     name: test
     state: absent
+    login_host: "{{ host_ip }}"
     login_user: "{{ mysql_user }}"
     login_password: "{{ mysql_user }}"
 

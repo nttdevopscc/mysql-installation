@@ -4,16 +4,6 @@
     password: "{{ dbpassword }}"
     priv: '*.*:ALL' 
     state: present
-    host_all: yes
     login_host: "{{ host_ip }}"
-    login_user: "{{ mysql_user }}"
-    login_password: "{{ mysql_password }}"
-
-  
-- name: Removes all anonymous user accounts
-  mysql_user:
-    name: ''
-    host_all: yes
-    state: absent
     login_user: "{{ mysql_user }}"
     login_password: "{{ mysql_password }}"
