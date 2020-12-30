@@ -1,7 +1,6 @@
 ---
-- name: Import vault vars
-  include_vars: vault.yml
-
+# - name: Import vault vars
+#   include_vars: vault.yml
 - name: MySQL Installation Sequence
   include_tasks: "{{ mysql_rule_item }}"
   loop:
