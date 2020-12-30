@@ -4,7 +4,7 @@
     password: "{{ dbpassword }}"
     priv: '*.*:ALL' 
     state: present
-    host: "{{ host_ip }}"
+    host_all: yes
     login_host: "{{ host_ip }}"
     login_user: "{{ mysql_user }}"
     login_password: "{{ mysql_password }}"
