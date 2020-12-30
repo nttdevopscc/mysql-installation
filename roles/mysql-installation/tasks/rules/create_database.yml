@@ -2,7 +2,7 @@
   mysql_db: 
     name: "{{ item }}"
     state: present
-    config_file: /etc/my.cnf
+    config_file: /etc/mysql/my.cnf
     login_host: "{{ host_ip }}"
     login_user: "{{ mysql_user }}"
     login_password: "{{ mysql_password }}"
