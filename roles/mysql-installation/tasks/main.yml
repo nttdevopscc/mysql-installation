@@ -5,6 +5,7 @@
   include_tasks: "{{ mysql_rule_item }}"
   loop:
     - rules/install_packages.yml
+    - rules/modify_mysqld_cnf.yml
     - rules/start_service.yml
     - rules/create_database_user.yml
     - rules/create_account_db.yml
