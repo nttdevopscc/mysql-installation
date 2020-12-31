@@ -1,4 +1,4 @@
-- name: Create application user
+- name: Create mysql user
   mysql_user: 
     name: "{{ dbuser }}"
     password: "{{ dbpass }}"
