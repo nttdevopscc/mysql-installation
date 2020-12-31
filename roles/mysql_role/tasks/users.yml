@@ -17,5 +17,6 @@
     password: "{{ item.password }}"
     priv: "{{  item.priv | default(['*.*:USAGE']) | join('/') }}"
     append_privs: true
+    config_file: /etc/mysql/my.cnf
   with_items: "{{ mysql_users }}"
   no_log: true
