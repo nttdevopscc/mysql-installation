@@ -1,8 +1,5 @@
 - name: Creating accounts DB
   mysql_db:
-    name: "{{ item }}"
+    name: "{{ dbname.item }}"
     state: present
-  loop:
-    - ihispoc-db01
-    - ihispoc-db02
-    - ihispoc-db03
+  loop: "{{ dbname }}"

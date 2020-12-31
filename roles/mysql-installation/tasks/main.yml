@@ -6,7 +6,6 @@
   loop:
     - rules/install_packages.yml
     - rules/start_service.yml
-#    - rules/create_database.yml
     - rules/create_database_user.yml
     - rules/create_account_db.yml
   loop_control:

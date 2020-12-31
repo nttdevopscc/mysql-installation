@@ -4,4 +4,7 @@ mysql_user: root
 mysql_password: p@ssw0rd
 dbuser: admin
 dbpass: p@ssw0rd
-dbname: ihispoc-db01
+dbname:
+  - ihispoc-db01
+  - ihispoc-db02
+  - ihispoc-db03
