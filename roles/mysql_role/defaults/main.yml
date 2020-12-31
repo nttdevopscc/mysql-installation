@@ -92,7 +92,7 @@ mysql_global_variables:
       innodb_log_file_size: 64M
       innodb_log_buffer_size: 8M
       general_log_file: /var/log/mysql/mysql.log
-      log_syslog_tag: mysql
+#      log_syslog_tag: mysql
       slow_query_log_file: /var/log/mysql/mysql-slow.log
       slow_query_log: "ON"
     mysqldump:
