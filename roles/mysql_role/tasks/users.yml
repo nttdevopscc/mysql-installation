@@ -6,7 +6,7 @@
     password: "{{ mysql_root_password }}"
     login_user: root
     login_host: localhost
-  when: "installed_mysql.stdout != 'Status: install ok installed'"
+#  when: "installed_mysql.stdout != 'Status: install ok installed'"
 
 - name: MySQL | Ensure MySQL users are present
   mysql_user:
