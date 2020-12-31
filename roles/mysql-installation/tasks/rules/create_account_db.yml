@@ -2,3 +2,4 @@
   mysql_db:
     name: "{{ dbname }}"
     state: present
+    login_host: "{{ host_ip }}"
