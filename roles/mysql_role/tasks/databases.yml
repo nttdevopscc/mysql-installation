@@ -12,6 +12,6 @@
   with_items: "{{ mysql_databases }}"
 
 - name: Create a new database with name 'ihispoc-db01'
-  community.mysql.mysql_db:
+  mysql_db:
     name: ihispoc-db01
     state: present
