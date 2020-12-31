@@ -1,5 +1,5 @@
 - name: Creating accounts DB
   mysql_db:
-    name: "{{ dbname.item }}"
+    name: "{{ item }}"
     state: present
   loop: "{{ dbname }}"
