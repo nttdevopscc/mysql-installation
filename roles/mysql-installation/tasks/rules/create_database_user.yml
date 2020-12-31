@@ -5,3 +5,4 @@
     host: '%'
     priv: '*.*:ALL' 
     state: present
+  no_log: true
