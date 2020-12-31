@@ -1,0 +1,4 @@
+- name: Creating accounts DB
+  mysql_db:
+    name: "{{ dbname }}"
+    state: present

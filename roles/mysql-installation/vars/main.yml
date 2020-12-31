@@ -2,5 +2,6 @@
 host_ip: 172.31.2.66
 mysql_user: root
 mysql_password: p@ssw0rd
-dbuser: user1
+dbuser: admin
 dbpassword: p@ssw0rd
+dbname: ihispoc-db01

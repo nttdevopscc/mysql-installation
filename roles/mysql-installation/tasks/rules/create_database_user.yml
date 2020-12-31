@@ -2,8 +2,6 @@
   mysql_user: 
     name: "{{ dbuser }}"
     password: "{{ dbpassword }}"
+    host: '%'
     priv: '*.*:ALL' 
     state: present
-    login_host: "{{ host_ip }}"
-    login_user: "{{ mysql_user }}"
-    login_password: "{{ mysql_password }}"
