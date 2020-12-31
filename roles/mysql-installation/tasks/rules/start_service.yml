@@ -1,5 +1,5 @@
 - name: Ensure MySQL is running
   service: 
     name=mysql 
-    state=started 
+    state=reloaded
     enabled=yes
