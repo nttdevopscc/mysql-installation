@@ -4,5 +4,6 @@
     state=present
   loop:
    - mysql-server
-   - python3-pymysql
-   - mysql-common
+   - mysql-client
+   - python3-mysqldb
+   - libmysqlclient-dev
