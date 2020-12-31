@@ -5,3 +5,4 @@
   loop:
    - mysql-server
    - python3-pymysql
+   - mysql-common
