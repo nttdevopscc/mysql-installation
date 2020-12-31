@@ -34,9 +34,6 @@ mysql_databases: []
   - name: ihispoc-db01
     collation: utf8_general_ci
     encoding: utf8
-  - name: ihispoc-db02
-    collation: utf8_general_ci
-    encoding: utf8
 
 # Users.
 mysql_root_user: root
