@@ -7,7 +7,7 @@
     login_user: root
     login_host: localhost
 #  when: "installed_mysql.stdout != 'Status: install ok installed'"
-  no_log: true
+  no_log: false
 
 - name: MySQL | Ensure MySQL users are present
   mysql_user:
