@@ -1,5 +1,8 @@
 - name: Creating accounts DB
   mysql_db:
-    name: "{{ dbname }}"
+    name: "{{ item }}"
     state: present
-    login_host: "{{ host_ip }}"
+  loop:
+    - ihispoc-db01
+    - ihispoc-db02
+    - ihispoc-db03
