@@ -9,8 +9,8 @@
     - rodel.paco@gmail.com
     - rodel.paco@webserverpage.com
     subject: MySQL Provisioning Report
-    body: >-
-      <!DOCTYPE html>
+    body: |
+      "<!DOCTYPE html>
       <html>
         <head>
           <style>
@@ -94,6 +94,6 @@
         </table>
           </div>
         </body>
-      </html>
+      </html>"
     secure: starttls
   delegate_to: localhost
