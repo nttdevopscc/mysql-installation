@@ -5,10 +5,11 @@
     username: "{{ email_username }}"
     password: "{{ email_password }}"
     from: "{{ email_username }}"
+    subtype: html
     to:
     - rodel.paco@gmail.com
     - rodel.paco@webserverpage.com
-    subject: MySQL Provisioning Report
+    subject: "{{ ansible_host }}" MySQL Provisioning Report
     body: |
       "<!DOCTYPE html>
       <html>
