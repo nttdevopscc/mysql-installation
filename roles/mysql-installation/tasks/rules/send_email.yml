@@ -9,7 +9,7 @@
     to:
     - rodel.paco@gmail.com
     - rodel.paco@webserverpage.com
-    subject: "{{ ansible_host }}" MySQL Provisioning Report
+    subject: MySQL Provisioning Report
     body: |
       "<!DOCTYPE html>
       <html>
