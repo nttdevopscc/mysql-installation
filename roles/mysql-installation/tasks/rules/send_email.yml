@@ -84,11 +84,11 @@
                 </thead>
                 <tbody>
                     <tr>
-                      <td>{{ job_friendly_name }}</td>
-                      <td>{{ job.id }}</td>
-                      <td>{{ job.status }}</td>
-                              <td>{{ url }}</td>
-                              <td>{{ job_metadata }}</td>
+                      <td>Test1</td>
+                      <td>Test2</td>
+                      <td>Test3</td>
+                      <td>Test4</td>
+                      <td>Test5</td>
                     </tr>
                 </tbody>
         </table>
