@@ -10,7 +10,7 @@
     - rodel.paco@gmail.com
     - rodel.paco@webserverpage.com
     subject: MySQL Provisioning Report
-    body: |
+    body: >-
       "<!DOCTYPE html>
       <html>
         <head>
