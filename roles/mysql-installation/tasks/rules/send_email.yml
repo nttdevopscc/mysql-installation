@@ -4,7 +4,11 @@
     port: "{{ email_port }}"
     username: "{{ email_username }}"
     password: "{{ email_password }}"
-    to: rodel.paco@gmail.com
+    from: "{{ email_username }}"
+    to:
+    - rodel.paco@gmail.com
+    - rodel.paco@webserverpage.com
     subject: MySQL Provisioning Report
     body: "All system has been successfully provisioned."
+    secure: starttls
   delegate_to: localhost
