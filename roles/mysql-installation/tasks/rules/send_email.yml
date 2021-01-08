@@ -1,0 +1,10 @@
+- name: Sending notification email        
+  mail:
+    host: "{{ email_host }}"
+    port: "{{ email_port }}"
+    username: "{{ email_username }}"
+    password: "{{ email_password }}"
+    to: rodel.paco@gmail.com
+    subject: MySQL Provisioning Report
+    body: "All system has been successfully provisioned."
+  delegate_to: localhost

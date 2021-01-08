@@ -8,3 +8,7 @@ dbname:
   - ihispoc-db01
   - ihispoc-db02
   - ihispoc-db03
+email_host: smtp.ionos.com
+email_port: 587
+email_username: ihis.poc@s694078334.onlinehome.us
+email_password: P@ssw0rd@2021
