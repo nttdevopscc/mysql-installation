@@ -76,6 +76,10 @@
           .heading__img {
             margin-right: 40px;
           }
+          .info {
+            padding: 40px;
+            background-color: #eee;
+          }
           .info__title {
             display: flex;
             width: 300px;
@@ -83,6 +87,10 @@
             background-color: #37474f;
             color: #fff;
             margin-bottom: 4px;
+          }
+          .info__title>* {
+            width: 50%;
+            font-weight: bold;
           }
           .report-container {
             max-width: 650px;
