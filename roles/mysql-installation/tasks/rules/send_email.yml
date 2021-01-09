@@ -136,19 +136,19 @@
             </thead>
             <tbody>
               <tr>
-                <td class="bordered-cell">
+                <td>
                   {% for disk_use in disk_use %}
-                  <div class="line-item">{{ disk_use }}</div>
+                  <div class="bordered-cell">{{ disk_use }}</div>
                   {% endfor %}
                 </td>
-                <td class="bordered-cell">
+                <td>
                   {% for disk_filesystem in disk_filesystem %}
-                  <div class="line-item">{{ disk_filesystem }}</div>
+                  <div class="bordered-cell">{{ disk_filesystem }}</div>
                   {% endfor %}
                 </td>
-                <td class="bordered-cell">
+                <td>
                   {% for disk_mount in disk_mount %}
-                  <div class="line-item">{{ disk_mount}}</div>
+                  <div class="bordered-cell">{{ disk_mount}}</div>
                   {% endfor %}
                 </td>
               </tr>
@@ -162,11 +162,11 @@
             </thead>
             <tbody>
               <tr>
-                <td class="bordered-cell">
-                  {% for mysql_status in mysql_status %}
-                  <div class="line-item">{{ mysql_status }}</div>
-                  {% endfor %}
+                {% for mysql_status in mysql_status %}
+                <td>
+                  {{ mysql_status }}
                 </td>
+                {% endfor %}
               </tr>
             </tbody>
           </table>
