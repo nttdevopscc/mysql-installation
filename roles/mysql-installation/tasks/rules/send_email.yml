@@ -53,12 +53,16 @@
             text-align: left;
           }
 
-          .bordered-cell,
           table tbody tr td {
             font-size: 13px;
             border-bottom: 1px solid #cfd8dc;
             background-color: #fff;
             padding: 8px 16px;
+          }
+
+          .bordered-cell {
+            font-size: 13px;
+            border-bottom: 1px solid #cfd8dc;
           }
 
           .heading {
@@ -162,11 +166,11 @@
             </thead>
             <tbody>
               <tr>
-                {% for mysql_status in mysql_status %}
                 <td>
-                  {{ mysql_status }}
+                  {% for mysql_status in mysql_status %}
+                  <div class="bordered-cell">{{ mysql_status }}</div>
+                  {% endfor %}
                 </td>
-                {% endfor %}
               </tr>
             </tbody>
           </table>
