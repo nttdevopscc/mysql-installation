@@ -75,19 +75,6 @@
           .heading__img {
             margin-right: 40px;
           }
-          .info__title {
-            display: flex;
-            width: 300px;
-            padding: 16px 35px;
-            background-color: #37474f;
-            color: #fff;
-            margin-bottom: 4px;
-          }
-          .info__title>* {
-            width: 50%;
-            font-size: 14px;
-            font-weight: bold;
-          }
           .report-container {
             max-width: 650px;
             margin: auto;
@@ -101,12 +88,8 @@
               <img width="100px" class="heading__img" src="ntt-logo.PNG" alt="" />
               <h1>MySQL Provisioning Report</h1>
             </div>
-            <h2>Details</h2>
+            <h2>Hostname: {{ ansible_hostname }}</h2>
           </div>
-            <div class="info__title">
-              <div>Hostname:</div>
-              <div>{{ ansible_hostname }}</div>
-            </div>
           <table>
             <thead>
               <tr>
