@@ -112,6 +112,7 @@
               <div>Hostname:</div>
               <div>{{ ansible_hostname }}</div>
             </div>
+          </div>
           <table>
             <thead>
               <tr>
