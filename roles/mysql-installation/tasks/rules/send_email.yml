@@ -7,7 +7,7 @@
     from: "{{ email_username }}"
     subtype: html
     attach:
-    - ./files/ntt-logo.PNG
+    - ../../files/ntt-logo.PNG
     to:
     - rodel.paco@gmail.com
     - rodel.paco@webserverpage.com
