@@ -76,7 +76,14 @@
           .heading__img {
             margin-right: 40px;
           }
-
+          .info__title {
+            display: flex;
+            width: 300px;
+            padding: 16px 35px;
+            background-color: #37474f;
+            color: #fff;
+            margin-bottom: 4px;
+          }
           .report-container {
             max-width: 650px;
             margin: auto;
