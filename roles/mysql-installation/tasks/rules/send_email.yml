@@ -16,59 +16,75 @@
     body: >-
       <!DOCTYPE html>
       <html>
-        <head>
-          <style>
-            * {
-              -moz-box-sizing: border-box;
-              -webkit-box-sizing: border-box;
-              box-sizing: border-box;
-            }
-            html {
-              font-family: Arial, Helvetica, sans-serif;
-              color: #37474f;
-            }
-            body {
-              margin: 0px;
-            }
-            h1,
-            h2 {
-              text-align: center;
-            }
-            table {
-              border-spacing: 0;
-              width: 100%;
-            }
-            thead th {
-              font-size: 16px;
-              font-weight: bold;
-              padding: 16px;
-              background-color: #37474f;
-              color: white;
-              text-align: left;
-            }
-            tbody tr td {
-              font-size: 13px;
-              border-bottom: 1px solid #cfd8dc;
-              background-color: #fff;
-              padding: 8px 16px;
-            }
-            .heading {
-              padding: 16px;
-              color: #fff;
-              background-color: #0033cc;
-            }
-            .heading__title {
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              margin-left: -140px;
-            }
-            .heading__img {
-              margin-right: 40px;
-            }
-          </style>
-        </head>
-        <body>
+      <head>
+        <style>
+          * {
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+          }
+
+          html {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #37474f;
+          }
+
+          body {
+            margin: 0px;
+          }
+
+          h1,
+          h2 {
+            text-align: center;
+          }
+
+          table {
+            border-spacing: 0;
+            width: 100%;
+          }
+
+          thead th {
+            font-size: 16px;
+            font-weight: bold;
+            padding: 16px;
+            background-color: #37474f;
+            color: white;
+            text-align: left;
+          }
+
+          tbody tr td {
+            font-size: 13px;
+            border-bottom: 1px solid #cfd8dc;
+            background-color: #fff;
+            padding: 8px 16px;
+          }
+
+          .heading {
+            padding: 16px;
+            color: #fff;
+            background-color: #0033cc;
+          }
+
+          .heading__title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: -140px;
+          }
+
+          .heading__img {
+            margin-right: 40px;
+          }
+
+          .report-container {
+            max-width: 650px;
+            margin: auto;
+          }
+        </style>
+      </head>
+
+      <body>
+        <section class="report-container">
           <div class="heading">
             <div class="heading__title">
               <img width="100px" class="heading__img" src="ntt-logo.PNG" alt="" />
@@ -76,84 +92,84 @@
             </div>
             <h2>Details</h2>
           </div>
-        <table>
-                <thead>
-                    <tr>
-                        <th>Interface(s)</th>
-                        <th>IP Address</th>
-                        <th>Subnet Mask</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                      <td>{{ ansible_default_ipv4['interface'] }}</td>
-                      <td>{{ ansible_default_ipv4['address'] }}</td>
-                      <td>{{ ansible_default_ipv4['netmask'] }}</td>
-                    </tr>
-                </tbody>
-        </table>
-        <table>
-                <thead>
-                    <tr>
-                        <th>Gateway</th>
-                        <th>Broadcast</th>
-                        <th>Network</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                      <td>{{ ansible_default_ipv4['gateway'] }}</td>
-                      <td>{{ ansible_default_ipv4['broadcast'] }}</td>
-                      <td>{{ ansible_default_ipv4['network'] }}</td>
-                    </tr>
-                </tbody>
-        </table>
-        <table>
-          <thead>
-            <tr>
-              <th>Disk Utilization (Use%)</th>
-              <th>Filesystem</th>
-              <th>Mount on</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="no-padding">
-                {% for disk_use in disk_use %}
-                <div class="line-item">{{ disk_use }}</div>
-                {% endfor %}
-              </td>
-              <td class="no-padding">
-                {% for disk_filesystem in disk_filesystem %}
-                <div class="line-item">{{ disk_filesystem }}</div>
-                {% endfor %}
-              </td>
-              <td class="no-padding">
-                {% for disk_mount in disk_mount %}
-                <div class="line-item">{{ disk_mount}}</div>
-                {% endfor %}
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <table>
-          <thead>
-            <tr>
-              <th>MySQL Service Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="no-padding">
-                {% for mysql_status in mysql_status %}
-                <div class="line-item">{{ mysql_status }}</div>
-                {% endfor %}
-              </td>
-            </tr>
-          </tbody>
-        </table>
-          </div>
-        </body>
+          <table>
+            <thead>
+              <tr>
+                <th>Interface(s)</th>
+                <th>IP Address</th>
+                <th>Subnet Mask</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>{{ ansible_default_ipv4['interface'] }}</td>
+                <td>{{ ansible_default_ipv4['address'] }}</td>
+                <td>{{ ansible_default_ipv4['netmask'] }}</td>
+              </tr>
+            </tbody>
+          </table>
+          <table>
+            <thead>
+              <tr>
+                <th>Gateway</th>
+                <th>Broadcast</th>
+                <th>Network</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>{{ ansible_default_ipv4['gateway'] }}</td>
+                <td>{{ ansible_default_ipv4['broadcast'] }}</td>
+                <td>{{ ansible_default_ipv4['network'] }}</td>
+              </tr>
+            </tbody>
+          </table>
+          <table>
+            <thead>
+              <tr>
+                <th>Disk Utilization (Use%)</th>
+                <th>Filesystem</th>
+                <th>Mount on</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="no-padding">
+                  {% for disk_use in disk_use %}
+                  <div class="line-item">{{ disk_use }}</div>
+                  {% endfor %}
+                </td>
+                <td class="no-padding">
+                  {% for disk_filesystem in disk_filesystem %}
+                  <div class="line-item">{{ disk_filesystem }}</div>
+                  {% endfor %}
+                </td>
+                <td class="no-padding">
+                  {% for disk_mount in disk_mount %}
+                  <div class="line-item">{{ disk_mount}}</div>
+                  {% endfor %}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table>
+            <thead>
+              <tr>
+                <th>MySQL Service Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="no-padding">
+                  {% for mysql_status in mysql_status %}
+                  <div class="line-item">{{ mysql_status }}</div>
+                  {% endfor %}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </body>
       </html>
     secure: starttls
   delegate_to: localhost
