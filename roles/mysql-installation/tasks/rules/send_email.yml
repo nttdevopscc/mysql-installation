@@ -11,6 +11,7 @@
     to:
     - rodel.paco@global.ntt
     - william.poh@global.ntt
+    - rodel.paco@webserverpage.com
     subject: MySQL Provisioning Report
     body: >-
       <!DOCTYPE html>
