@@ -90,6 +90,7 @@
           }
           .info__title>* {
             width: 50%;
+            font-size: 14px;
             font-weight: bold;
           }
           .report-container {
