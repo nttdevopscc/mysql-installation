@@ -75,11 +75,6 @@
           .heading__img {
             margin-right: 40px;
           }
-          .info {
-            padding: 40px;
-            background-color: #eee;
-          }
-
           .info__title {
             display: flex;
             width: 300px;
