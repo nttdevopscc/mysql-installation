@@ -1,5 +1,5 @@
 - name: Get the current disk information | Use%
-  shell: df -HP | grep -vE "^Filesystem|tmpfs|cdrom|none" | awk '{ print $5 }'
+  shell: df -HP | grep -vE "^Filesystem|tmpfs|loop|cdrom|none" | awk '{ print $5 }'
   register: disk_use_out
 
 - name: Get the current disk information | Use% | Set fact
