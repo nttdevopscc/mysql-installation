@@ -77,20 +77,24 @@
         <table>
                 <thead>
                     <tr>
-                        <th>Job</th>
-                        <th>Job ID</th>
-                      <th>Job Status</th>
-                      <th>URL</th>
-                              <th>Job Metadata</th>
+                        <th>Interface(s)</th>
+                        <th>IP Address</th>
+                        <th>Subnet Mask</th>
+                        <th>Gateway</th>
+                        <th>Broadcast</th>
+                        <th>Network</th>
+                        <th>Mac Address</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                      <td>Test1</td>
-                      <td>Test2</td>
-                      <td>Test3</td>
-                      <td>Test4</td>
-                      <td>Test5</td>
+                      <td>{{ ansible_default_ipv4['interface'] }}</td>
+                      <td>{{ ansible_default_ipv4['address'] }}</td>
+                      <td>{{ ansible_default_ipv4['netmask'] }}</td>
+                      <td>{{ ansible_default_ipv4['gateway'] }}</td>
+                      <td>{{ ansible_default_ipv4['broadcast'] }}</td>
+                      <td>{{ ansible_default_ipv4['network'] }}</td>
+                      <td>{{ ansible_default_ipv4['macaddress'] }}</td>
                     </tr>
                 </tbody>
         </table>
