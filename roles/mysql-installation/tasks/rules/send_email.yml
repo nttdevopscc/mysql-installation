@@ -53,16 +53,11 @@
             text-align: left;
           }
 
-          table tbody tr td {
+          .bordered-cell {
             font-size: 13px;
             border-bottom: 1px solid #cfd8dc;
             background-color: #fff;
             padding: 8px 16px;
-          }
-
-          .bordered-cell {
-            font-size: 13px;
-            border-bottom: 1px solid #cfd8dc;
           }
 
           .heading {
@@ -108,9 +103,9 @@
             </thead>
             <tbody>
               <tr>
-                <td>{{ ansible_default_ipv4['interface'] }}</td>
-                <td>{{ ansible_default_ipv4['address'] }}</td>
-                <td>{{ ansible_default_ipv4['netmask'] }}</td>
+                <td class="bordered-cell">{{ ansible_default_ipv4['interface'] }}</td>
+                <td class="bordered-cell">{{ ansible_default_ipv4['address'] }}</td>
+                <td class="bordered-cell">{{ ansible_default_ipv4['netmask'] }}</td>
               </tr>
             </tbody>
           </table>
@@ -124,9 +119,9 @@
             </thead>
             <tbody>
               <tr>
-                <td>{{ ansible_default_ipv4['gateway'] }}</td>
-                <td>{{ ansible_default_ipv4['broadcast'] }}</td>
-                <td>{{ ansible_default_ipv4['network'] }}</td>
+                <td class="bordered-cell">{{ ansible_default_ipv4['gateway'] }}</td>
+                <td class="bordered-cell">{{ ansible_default_ipv4['broadcast'] }}</td>
+                <td class="bordered-cell">{{ ansible_default_ipv4['network'] }}</td>
               </tr>
             </tbody>
           </table>
