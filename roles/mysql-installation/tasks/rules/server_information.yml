@@ -7,7 +7,7 @@
     disk_use: "{{ disk_use_out.stdout_lines }}"
 
 - name: Get the current disk information | Filesystem
-  shell: df -HP | grep -vE "^Filesystem|tmpfs|cdrom|none" | awk '{ print $1 }'
+  shell: df -HP | grep -vE "^Filesystem|tmpfs|loop|cdrom|none" | awk '{ print $1 }'
   register: disk_filesystem_out
 
 - name: Get the current disk information | Filesystem | Set fact
@@ -15,7 +15,7 @@
     disk_filesystem: "{{ disk_filesystem_out.stdout_lines }}"
 
 - name: Get the current disk information | Mount on
-  shell: df -HP | grep -vE "^Filesystem|tmpfs|cdrom|none" | awk '{ print $6 }'
+  shell: df -HP | grep -vE "^Filesystem|tmpfs|loop|cdrom|none" | awk '{ print $6 }'
   register: disk_mount_out
 
 - name: Get the current disk information | Mount on | Set fact
