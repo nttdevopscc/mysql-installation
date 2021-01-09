@@ -50,6 +50,6 @@
   set_fact:
     macaddress_info: "{{ ansible_default_ipv4['macaddress'] }}"
 
-- name:
-  set_fact:
-    mtu_info: "{{ ansible_default_ipv4['mtu'] }}"
+# - name:
+#   set_fact:
+#     mtu_info: "{{ ansible_default_ipv4['mtu'] }}"
