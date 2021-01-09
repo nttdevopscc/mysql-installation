@@ -68,7 +68,7 @@
         <body>
           <div class="heading">
             <div class="heading__title">
-              <img width="100px" class="heading__img" src="./ntt-logo.PNG" alt="" />
+              <img width="100px" class="heading__img" src="./files/ntt-logo.PNG" alt="" />
               <h1>VA Report</h1>
             </div>
             <h2>Details</h2>
