@@ -9,7 +9,7 @@
     - rules/start_service.yml
     - rules/create_database_user.yml
     - rules/create_account_db.yml
-    - rules/server_information.yml
-    - rules/send_email.yml
+    # - rules/server_information.yml
+    # - rules/send_email.yml
   loop_control:
     loop_var: mysql_rule_item
