@@ -1,0 +1,55 @@
+- name: Get the current disk information | Use%
+  shell: df -HP | grep -vE "^Filesystem|tmpfs|cdrom|none" | awk '{ print $5 }'
+  register: disk_use_out
+
+- name: Get the current disk information | Use% | Set fact
+  set_fact:
+    disk_use: "{{ disk_use_out.stdout_lines }}"
+
+- name: Get the current disk information | Filesystem
+  shell: df -HP | grep -vE "^Filesystem|tmpfs|cdrom|none" | awk '{ print $1 }'
+  register: disk_filesystem_out
+
+- name: Get the current disk information | Filesystem | Set fact
+  set_fact:
+    disk_filesystem: "{{ disk_filesystem_out.stdout_lines }}"
+
+- name: Get the current disk information | Mount on
+  shell: df -HP | grep -vE "^Filesystem|tmpfs|cdrom|none" | awk '{ print $6 }'
+  register: disk_mount_out
+
+- name: Get the current disk information | Mount on | Set fact
+  set_fact:
+    disk_mount: "{{ disk_mount_out.stdout_lines }}"
+
+- name:
+  set_fact:
+    interface_info: "{{ ansible_default_ipv4['interface'] }}"
+
+- name:
+  set_fact:
+    ipv4_info: "{{ ansible_default_ipv4['address'] }}"
+
+- name:
+  set_fact:
+    netmask_info: "{{ ansible_default_ipv4['netmask'] }}"
+
+- name:
+  set_fact:
+    gateway_info: "{{ ansible_default_ipv4['gateway'] }}"
+
+- name:
+  set_fact:
+    broadcast_info: "{{ ansible_default_ipv4['broadcast'] }}"
+
+- name:
+  set_fact:
+    network_info: "{{ ansible_default_ipv4['network'] }}"
+
+- name:
+  set_fact:
+    macaddress_info: "{{ ansible_default_ipv4['macaddress'] }}"
+
+- name:
+  set_fact:
+    mtu_info: "{{ ansible_default_ipv4['mtu'] }}"

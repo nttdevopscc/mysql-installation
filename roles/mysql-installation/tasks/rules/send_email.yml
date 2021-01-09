@@ -93,6 +93,34 @@
                     </tr>
                 </tbody>
         </table>
+        <table>
+          <thead>
+            <tr>
+              <th>Disk Utilization (Use%)</th>
+              <th>Filesystem</th>
+              <th>Mount on</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="no-padding">
+                {% for disk_use in disk_use %}
+                <div class="line-item">{{ disk_use }}</div>
+                {% endfor %}
+              </td>
+              <td class="no-padding">
+                {% for disk_filesystem in disk_filesystem %}
+                <div class="line-item">{{ disk_filesystem }}</div>
+                {% endfor %}
+              </td>
+              <td class="no-padding">
+                {% for disk_mount in disk_mount %}
+                <div class="line-item">{{ disk_mount}}</div>
+                {% endfor %}
+              </td>
+            </tr>
+          </tbody>
+        </table>
           </div>
         </body>
       </html>
