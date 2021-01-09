@@ -104,9 +104,9 @@
             </thead>
             <tbody>
               <tr>
-                <td class="bordered-cell">{{ ansible_default_ipv4['interface'] }}</td>
-                <td class="bordered-cell">{{ ansible_default_ipv4['address'] }}</td>
-                <td class="bordered-cell">{{ ansible_default_ipv4['netmask'] }}</td>
+                <td>{{ ansible_default_ipv4['interface'] }}</td>
+                <td>{{ ansible_default_ipv4['address'] }}</td>
+                <td>{{ ansible_default_ipv4['netmask'] }}</td>
               </tr>
             </tbody>
           </table>
@@ -136,17 +136,17 @@
             </thead>
             <tbody>
               <tr>
-                <td>
+                <td class="bordered-cell">
                   {% for disk_use in disk_use %}
                   <div class="line-item">{{ disk_use }}</div>
                   {% endfor %}
                 </td>
-                <td>
+                <td class="bordered-cell">
                   {% for disk_filesystem in disk_filesystem %}
                   <div class="line-item">{{ disk_filesystem }}</div>
                   {% endfor %}
                 </td>
-                <td>
+                <td class="bordered-cell">
                   {% for disk_mount in disk_mount %}
                   <div class="line-item">{{ disk_mount}}</div>
                   {% endfor %}
@@ -162,7 +162,7 @@
             </thead>
             <tbody>
               <tr>
-                <td>
+                <td class="bordered-cell">
                   {% for mysql_status in mysql_status %}
                   <div class="line-item">{{ mysql_status }}</div>
                   {% endfor %}
