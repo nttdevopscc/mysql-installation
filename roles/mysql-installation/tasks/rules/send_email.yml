@@ -99,19 +99,6 @@
                 <th>Interface(s)</th>
                 <th>IP Address</th>
                 <th>Subnet Mask</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="bordered-cell">{{ ansible_default_ipv4['interface'] }}</td>
-                <td class="bordered-cell">{{ ansible_default_ipv4['address'] }}</td>
-                <td class="bordered-cell">{{ ansible_default_ipv4['netmask'] }}</td>
-              </tr>
-            </tbody>
-          </table>
-          <table>
-            <thead>
-              <tr>
                 <th>Gateway</th>
                 <th>Broadcast</th>
                 <th>Network</th>
@@ -119,6 +106,9 @@
             </thead>
             <tbody>
               <tr>
+                <td class="bordered-cell">{{ ansible_default_ipv4['interface'] }}</td>
+                <td class="bordered-cell">{{ ansible_default_ipv4['address'] }}</td>
+                <td class="bordered-cell">{{ ansible_default_ipv4['netmask'] }}</td>
                 <td class="bordered-cell">{{ ansible_default_ipv4['gateway'] }}</td>
                 <td class="bordered-cell">{{ ansible_default_ipv4['broadcast'] }}</td>
                 <td class="bordered-cell">{{ ansible_default_ipv4['network'] }}</td>
