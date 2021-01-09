@@ -83,7 +83,6 @@
           }
         </style>
       </head>
-
       <body>
         <section class="report-container">
           <div class="heading">
@@ -93,6 +92,24 @@
             </div>
             <h2>Details</h2>
           </div>
+      <div class="info">
+        <div class="info__title">
+          <div>Hostname:</div>
+          <div>{{ ansible_hostname }}</div>
+        </div>
+        <div class="info__title">
+          <div>vCPU</div>
+          <div>{{ ansible_processor_vcpus }}</div>
+        </div>
+        <div class="info__title">
+          <div>OS Version:</div>
+          <div>{{ ansible_distribution }} {{ ansible_distribution_version }}</div>
+        </div>
+        <div class="info__title">
+          <div>Total Memory (mb)</div>
+          <div>{{ ansible_memtotal_mb }}</div>
+        </div>
+      </div>
           <table>
             <thead>
               <tr>
