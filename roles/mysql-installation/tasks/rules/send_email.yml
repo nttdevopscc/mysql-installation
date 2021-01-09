@@ -126,6 +126,22 @@
             </tr>
           </tbody>
         </table>
+        <table>
+          <thead>
+            <tr>
+              <th>MySQL Service Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="no-padding">
+                {% for mysql_status in mysql_status %}
+                <div class="line-item">{{ mysql_status }}</div>
+                {% endfor %}
+              </td>
+            </tr>
+          </tbody>
+        </table>
           </div>
         </body>
       </html>

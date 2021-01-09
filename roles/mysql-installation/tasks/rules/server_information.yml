@@ -22,34 +22,10 @@
   set_fact:
     disk_mount: "{{ disk_mount_out.stdout_lines }}"
 
-- name:
-  set_fact:
-    interface_info: "{{ ansible_default_ipv4['interface'] }}"
+- name: Get MySQL service status
+  shell: systemctl status mysql
+  register: mysql_out
 
-- name:
+- name: Get MySQL service status | Set fact
   set_fact:
-    ipv4_info: "{{ ansible_default_ipv4['address'] }}"
-
-- name:
-  set_fact:
-    netmask_info: "{{ ansible_default_ipv4['netmask'] }}"
-
-- name:
-  set_fact:
-    gateway_info: "{{ ansible_default_ipv4['gateway'] }}"
-
-- name:
-  set_fact:
-    broadcast_info: "{{ ansible_default_ipv4['broadcast'] }}"
-
-- name:
-  set_fact:
-    network_info: "{{ ansible_default_ipv4['network'] }}"
-
-- name:
-  set_fact:
-    macaddress_info: "{{ ansible_default_ipv4['macaddress'] }}"
-
-# - name:
-#   set_fact:
-#     mtu_info: "{{ ansible_default_ipv4['mtu'] }}"
+    mysql_status: "{{ mysql_out.stdout_lines }}"
