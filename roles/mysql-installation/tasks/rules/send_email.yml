@@ -11,7 +11,7 @@
     - rodel.paco@webserverpage.com
     subject: MySQL Provisioning Report
     body: >-
-      "<!DOCTYPE html>
+      <!DOCTYPE html>
       <html>
         <head>
           <style>
@@ -69,7 +69,7 @@
           <div class="heading">
             <div class="heading__title">
               <img width="100px" class="heading__img" src="./files/ntt-logo.PNG" alt="" />
-              <h1>VA Report</h1>
+              <h1>VMySQL Provisioning Report</h1>
             </div>
             <h2>Details</h2>
           </div>
@@ -95,6 +95,6 @@
         </table>
           </div>
         </body>
-      </html>"
+      </html>
     secure: starttls
   delegate_to: localhost
