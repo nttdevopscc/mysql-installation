@@ -80,10 +80,6 @@
                         <th>Interface(s)</th>
                         <th>IP Address</th>
                         <th>Subnet Mask</th>
-                        <th>Gateway</th>
-                        <th>Broadcast</th>
-                        <th>Network</th>
-                        <th>Mac Address</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -91,10 +87,22 @@
                       <td>{{ ansible_default_ipv4['interface'] }}</td>
                       <td>{{ ansible_default_ipv4['address'] }}</td>
                       <td>{{ ansible_default_ipv4['netmask'] }}</td>
+                    </tr>
+                </tbody>
+        </table>
+        <table>
+                <thead>
+                    <tr>
+                        <th>Gateway</th>
+                        <th>Broadcast</th>
+                        <th>Network</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
                       <td>{{ ansible_default_ipv4['gateway'] }}</td>
                       <td>{{ ansible_default_ipv4['broadcast'] }}</td>
                       <td>{{ ansible_default_ipv4['network'] }}</td>
-                      <td>{{ ansible_default_ipv4['macaddress'] }}</td>
                     </tr>
                 </tbody>
         </table>
