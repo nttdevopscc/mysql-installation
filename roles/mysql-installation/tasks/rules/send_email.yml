@@ -72,13 +72,8 @@
             justify-content: center;
             margin-left: -140px;
           }
-
           .heading__img {
             margin-right: 40px;
-          }
-          .info {
-            padding: 40px;
-            background-color: #eee;
           }
           .info__title {
             display: flex;
@@ -111,8 +106,6 @@
             <div class="info__title">
               <div>Hostname:</div>
               <div>{{ ansible_hostname }}</div>
-            </div>
-          </div>
           <table>
             <thead>
               <tr>
