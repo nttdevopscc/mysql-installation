@@ -8,7 +8,7 @@
         minutes: 1
 
 - name: MySQL Installation
-  hosts: mysql_server
+  hosts: device_roles_db-tier
   ignore_errors: true
   ignore_unreachable: true
   roles:
