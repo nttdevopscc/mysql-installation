@@ -1,3 +1,12 @@
+- name: Refresh Host Inventory at Runtime and Add a Pause while Executing Playbook
+  hosts: local
+  connection: local
+  gather_facts: True
+  tasks:
+    - meta: refresh_inventory
+    - pause:
+        minutes: 1
+
 - name: MySQL Installation
   hosts: mysql_server
   ignore_errors: true
